@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import styles from "./Carousel.module.scss";
 
 const testimonials = [
 	{
@@ -46,10 +47,9 @@ export default function CustomerFeedbackCarousel() {
 		if (!carousel) return;
 
 		const scrollWidth = carousel.scrollWidth;
-		const clientWidth = carousel.clientWidth;
 
 		let scrollPosition = 0;
-		const scrollSpeed = 0.5; // Pixels per frame
+		const scrollSpeed = 0.5;
 
 		const animate = () => {
 			scrollPosition += scrollSpeed;
@@ -68,42 +68,27 @@ export default function CustomerFeedbackCarousel() {
 	const doubledTestimonials = [...testimonials, ...testimonials];
 
 	return (
-		<section className="py-20 bg-gradient-to-b from-[#0D1821] to-[#1A2A3A] overflow-hidden">
-			<div className="container mx-auto px-6">
-				<h2 className="text-4xl font-bold text-center mb-12">
-					What Our Users Say
-				</h2>
+		<section>
+			<div>
+				<h2>What Our Users Say</h2>
 				<div
 					ref={carouselRef}
-					className="flex overflow-x-hidden"
 					style={{ WebkitOverflowScrolling: "touch" }}
 				>
-					<div className="flex animate-carousel">
+					<div className={styles.animatedCarousel}>
 						{doubledTestimonials.map((testimonial, index) => (
-							<div
-								key={index}
-								className="flex-shrink-0 w-80 mx-4"
-							>
-								<div className="bg-[#1E2A3A] p-6 rounded-lg shadow-lg h-full flex flex-col">
-									<div className="flex items-center mb-4">
+							<div key={index}>
+								<div>
+									<div>
 										<div>
-											<h3 className="font-bold">
-												{testimonial.name}
-											</h3>
-											<p className="text-sm text-gray-400">
-												{testimonial.role}
-											</p>
+											<h3>{testimonial.name}</h3>
+											<p>{testimonial.role}</p>
 										</div>
 									</div>
 									<div className="flex mb-2">
 										{[...Array(5)].map((_, i) => (
 											<svg
 												key={i}
-												className={`w-5 h-5 ${
-													i < testimonial.rating
-														? "text-[#256EFF]"
-														: "text-gray-400"
-												}`}
 												fill="currentColor"
 												viewBox="0 0 20 20"
 											>
@@ -111,9 +96,7 @@ export default function CustomerFeedbackCarousel() {
 											</svg>
 										))}
 									</div>
-									<p className="text-gray-300 flex-grow">
-										{testimonial.text}
-									</p>
+									<p>{testimonial.text}</p>
 								</div>
 							</div>
 						))}
