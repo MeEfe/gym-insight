@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react";
 import styles from "./Carousel.module.scss";
 
 const testimonials = [
@@ -40,69 +39,59 @@ const testimonials = [
 ];
 
 export default function CustomerFeedbackCarousel() {
-	const carouselRef = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		const carousel = carouselRef.current;
-		if (!carousel) return;
-
-		const scrollWidth = carousel.scrollWidth;
-
-		let scrollPosition = 0;
-		const scrollSpeed = 0.5;
-
-		const animate = () => {
-			scrollPosition += scrollSpeed;
-			if (scrollPosition >= scrollWidth / 2) {
-				scrollPosition = 0;
-			}
-			carousel.scrollLeft = scrollPosition;
-			requestAnimationFrame(animate);
-		};
-
-		const animationId = requestAnimationFrame(animate);
-
-		return () => cancelAnimationFrame(animationId);
-	}, []);
-
 	const doubledTestimonials = [...testimonials, ...testimonials];
 
 	return (
-		<section>
-			<div>
-				<h2>What Our Users Say</h2>
-				<div
-					ref={carouselRef}
-					style={{ WebkitOverflowScrolling: "touch" }}
-				>
-					<div className={styles.animatedCarousel}>
-						{doubledTestimonials.map((testimonial, index) => (
-							<div key={index}>
-								<div>
-									<div>
-										<div>
-											<h3>{testimonial.name}</h3>
-											<p>{testimonial.role}</p>
-										</div>
-									</div>
-									<div className="flex mb-2">
-										{[...Array(5)].map((_, i) => (
-											<svg
-												key={i}
-												fill="currentColor"
-												viewBox="0 0 20 20"
-											>
-												<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-											</svg>
-										))}
-									</div>
-									<p>{testimonial.text}</p>
-								</div>
-							</div>
-						))}
+		<div
+			style={{
+				marginTop: "50px",
+				padding: "20px 0",
+				background: "#f0f0f0",
+				overflow: "hidden",
+				whiteSpace: "nowrap",
+			}}
+		>
+			<div className={styles.animatedCarousel}>
+				{doubledTestimonials.map((card) => (
+					<div
+						key={card.name}
+						style={{
+							display: "inline-block",
+							width: "200px",
+							height: "150px",
+							margin: "0 10px",
+							background: "white",
+							borderRadius: "10px",
+							boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+							textAlign: "center",
+							lineHeight: "150px",
+							fontSize: "1.5rem",
+						}}
+					>
+						Card {card.name}
 					</div>
-				</div>
+				))}
+
+				{doubledTestimonials.map((card) => (
+					<div
+						key={`duplicate-${card.name}`}
+						style={{
+							display: "inline-block",
+							width: "200px",
+							height: "150px",
+							margin: "0 10px",
+							background: "white",
+							borderRadius: "10px",
+							boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+							textAlign: "center",
+							lineHeight: "150px",
+							fontSize: "1.5rem",
+						}}
+					>
+						Card {card.name}
+					</div>
+				))}
 			</div>
-		</section>
+		</div>
 	);
 }

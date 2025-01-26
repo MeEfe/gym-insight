@@ -8,9 +8,5 @@
 }
 
 .animatedCarousel {
-	animation: carousel 60s linear infinite;
-}
-
-.animateCarousel:hover {
-	animation-play-state: paused;
+	animation: carousel 15s linear infinite;
 }

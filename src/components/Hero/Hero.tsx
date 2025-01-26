@@ -2,6 +2,7 @@ import { useRef } from "react";
 import styles from "./Hero.module.scss";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Header from "../Header/Header";
+import CustomerFeedbackCarousel from "../Carousel/Carousel";
 
 export default function Hero() {
 	const alignCenter = { display: "flex", alignItems: "center" };
@@ -26,8 +27,8 @@ export default function Hero() {
 								</p>
 							</div>
 							<svg
-								width="50px"
-								height="50px"
+								width="30px"
+								height="30px"
 								viewBox="0 0 24 24"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -66,12 +67,7 @@ export default function Hero() {
 						backgroundColor: "#cccccc",
 					}}
 				>
-					<div className={styles.content}>
-						<h1>Explore Page 3</h1>
-						<p>
-							This is the final section of the full-page scroll.
-						</p>
-					</div>
+					<CustomerFeedbackCarousel />
 				</ParallaxLayer>
 			</Parallax>
 		</>
