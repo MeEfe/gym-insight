@@ -1,7 +1,38 @@
-.heroContainer {
-	height: 100vh;
-	width: 100vw;
+@keyframes jump {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
+}
+
+.initContainer {
 	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.initPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	flex: 1;
+}
+
+.headLine {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+svg {
+	position: absolute;
+	bottom: 0;
+	animation: jump 1.5s infinite;
 }
