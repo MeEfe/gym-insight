@@ -36,3 +36,19 @@ svg {
 	bottom: 0;
 	animation: jump 1.5s infinite;
 }
+
+.progressBarContainer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background-color: var(--primary-background-color);
+	z-index: 1000;
+}
+
+.progressBar {
+	width: 100%;
+	background-color: var(--secondary-background-color);
+	height: 0;
+}
