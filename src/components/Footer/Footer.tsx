@@ -11,9 +11,17 @@ export default function Footer() {
 					</div>
 					<div className={styles.column}>
 						<h4>Contact</h4>
-						<p>Email: info@gymtech.com</p>
-						<p>Phone: (123) 456-7890</p>
-						<p>Address: 123 Gym St, Fitness City</p>
+						<ul>
+							<li>
+								<p>Email: info@gyminsight.com</p>
+							</li>
+							<li>
+								<p>Phone: (123) 456-7890</p>
+							</li>
+							<li>
+								<p>Address: Insight Avenue 1</p>
+							</li>
+						</ul>
 					</div>
 					<div className={styles.column}>
 						<h4>Legal</h4>
