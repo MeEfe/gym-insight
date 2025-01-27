@@ -38,7 +38,7 @@ export default function Hero() {
 					style={{ height: `${scrollProgress}%` }}
 				/>
 			</div>
-			<Parallax ref={parallax} pages={8}>
+			<Parallax ref={parallax} pages={7}>
 				<ParallaxLayer
 					offset={0}
 					speed={0.5}
@@ -67,7 +67,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					sticky={{ start: 1, end: 6 }}
+					sticky={{ start: 1, end: 5 }}
 					style={{
 						...alignCenter,
 						justifyContent: "flex-start",
@@ -81,7 +81,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={2}
+					offset={1}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -107,7 +107,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={3}
+					offset={2}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -132,7 +132,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={4}
+					offset={3}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -157,7 +157,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={5}
+					offset={4}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -181,7 +181,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={6}
+					offset={5}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -205,7 +205,7 @@ export default function Hero() {
 					</div>
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={7} speed={0.5}>
+				<ParallaxLayer offset={6} speed={0.5}>
 					<div className={styles.pageEndContainer}>
 						<CustomerFeedbackCarousel />
 						<Footer />
