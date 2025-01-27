@@ -10,6 +10,7 @@
 
 #headline {
 	font-size: clamp(2rem, 5vw, 4rem);
+	margin-bottom: 12px;
 }
 #subtitle {
 	font-size: clamp(1rem, 2vw, 1.5rem);
@@ -33,6 +34,7 @@
 	justify-content: center;
 	flex-direction: column;
 	position: relative;
+	text-align: center;
 	flex: 1;
 
 	img {
@@ -51,6 +53,8 @@
 	position: absolute;
 	bottom: 0;
 	animation: jump 1.5s infinite;
+	width: 30px;
+	height: 30px;
 }
 
 .progressBarContainer {
@@ -81,4 +85,41 @@
 	height: 100%;
 	justify-content: flex-end;
 	background-color: red;
+}
+
+.cardContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 40%;
+	padding: 48px;
+
+	&.start {
+		align-items: start;
+	}
+}
+
+.card {
+	border-radius: 6px;
+	padding: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--secondary-background-color);
+}
+
+.storyTitle {
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+.informationTitle {
+	letter-spacing: -3px;
+	line-height: 1.2;
+}
+
+.informationParagraph {
+	font-size: clamp(0.875rem, 1.8vw, 1.25rem);
 }
