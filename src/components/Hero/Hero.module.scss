@@ -20,6 +20,11 @@
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
+	background: linear-gradient(
+		to bottom,
+		var(--primary-background-color-shade-1) 1%,
+		var(--primary-background-color) 100%
+	);
 }
 
 .initPage {
