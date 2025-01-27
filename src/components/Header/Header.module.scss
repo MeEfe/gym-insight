@@ -7,12 +7,12 @@
 	z-index: 500;
 }
 
-.title {
-	margin: 0;
-	font-size: 1.5rem;
-}
-
 .hamburger {
 	cursor: pointer;
 	transition: transform 0.3s, opacity 0.3s;
+}
+
+.logoContainer {
+	display: flex;
+	gap: 16px;
 }
