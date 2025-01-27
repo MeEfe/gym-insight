@@ -31,6 +31,9 @@ export default function Sidebar(props: {
 					<li>
 						<a href="#contact">Contact</a>
 					</li>
+					<li>
+						<button className={styles.demoBtn}>Request demo</button>
+					</li>
 				</ul>
 			</nav>
 		</animated.div>

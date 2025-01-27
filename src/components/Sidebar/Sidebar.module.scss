@@ -44,3 +44,20 @@
 		}
 	}
 }
+
+.demoBtn {
+	cursor: pointer;
+	font-weight: bold;
+	padding: 6;
+	background-color: none;
+	background-color: var(--secondary-background-color);
+	padding: 10px 20px;
+	border-radius: 5px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: translateX(10px);
+	}
+}
