@@ -4,6 +4,7 @@ import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Header from "../Header/Header";
 import CustomerFeedbackCarousel from "../Carousel/Carousel";
 import Footer from "../Footer/Footer";
+import Logo from "../../assets/logo.svg";
 
 export default function Hero() {
 	const alignCenter = { display: "flex", alignItems: "center" };
@@ -46,6 +47,7 @@ export default function Hero() {
 						<Header />
 						<div className={styles.initPage}>
 							<div className={styles.headLine}>
+								<img src={Logo} alt="logo" />
 								<h1 id={styles.headline}>
 									Revolutionize your gym experience
 								</h1>
