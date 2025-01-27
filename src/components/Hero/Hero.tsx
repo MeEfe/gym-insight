@@ -71,6 +71,7 @@ export default function Hero() {
 					style={{
 						...alignCenter,
 						justifyContent: "flex-start",
+						alignItems: "start",
 					}}
 				>
 					<div className={styles.cardContainer}>
@@ -86,6 +87,7 @@ export default function Hero() {
 					style={{
 						...alignCenter,
 						justifyContent: "flex-end",
+						alignItems: "start",
 					}}
 				>
 					<div className={`${styles.cardContainer} ${styles.start}`}>
@@ -112,6 +114,7 @@ export default function Hero() {
 					style={{
 						...alignCenter,
 						justifyContent: "flex-end",
+						alignItems: "start",
 					}}
 				>
 					<div className={`${styles.cardContainer} ${styles.start}`}>
@@ -137,6 +140,7 @@ export default function Hero() {
 					style={{
 						...alignCenter,
 						justifyContent: "flex-end",
+						alignItems: "start",
 					}}
 				>
 					<div className={`${styles.cardContainer} ${styles.start}`}>
@@ -162,6 +166,7 @@ export default function Hero() {
 					style={{
 						...alignCenter,
 						justifyContent: "flex-end",
+						alignItems: "start",
 					}}
 				>
 					<div className={`${styles.cardContainer} ${styles.start}`}>
@@ -186,6 +191,7 @@ export default function Hero() {
 					style={{
 						...alignCenter,
 						justifyContent: "flex-end",
+						alignItems: "start",
 					}}
 				>
 					<div className={`${styles.cardContainer} ${styles.start}`}>
