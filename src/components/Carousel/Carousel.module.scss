@@ -19,7 +19,6 @@
 .carouselWrapper {
 	display: flex;
 	overflow-x: hidden;
-	-webkit-overflow-scrolling: touch;
 }
 
 .carouselInner {
@@ -107,6 +106,10 @@
 	.section {
 		padding: 0;
 		margin: 22px;
+	}
+
+	.container {
+		width: 100%;
 	}
 }
 
