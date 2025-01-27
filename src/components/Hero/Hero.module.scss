@@ -8,6 +8,13 @@
 	}
 }
 
+#headline {
+	font-size: clamp(2rem, 5vw, 4rem);
+}
+#subtitle {
+	font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
 .initContainer {
 	display: flex;
 	flex-direction: column;
@@ -27,11 +34,11 @@
 .headLine {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 }
 
-svg {
+#arrowDown {
 	position: absolute;
 	bottom: 0;
 	animation: jump 1.5s infinite;
@@ -51,4 +58,18 @@ svg {
 	width: 100%;
 	background-color: var(--secondary-background-color);
 	height: 0;
+}
+
+.pageEndContainer {
+	background: linear-gradient(
+		to bottom,
+		var(--primary-background-color) 0%,
+		var(--primary-background-color-shade-1) 70%,
+		var(--primary-background-color-shade-2) 100%
+	);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: flex-end;
+	background-color: red;
 }

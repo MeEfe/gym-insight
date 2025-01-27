@@ -1,0 +1,66 @@
+.footer {
+	background-color: var(--primary-background-color);
+	padding: 3rem 0;
+	width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.grid {
+	display: flex;
+	justify-content: space-around;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.column h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.column h4 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.column p,
+.column ul {
+	font-size: 0.875rem;
+}
+
+.column ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.column ul li {
+	margin-bottom: 0.5rem;
+}
+
+.column a {
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.socialIcons {
+	display: flex;
+	gap: 1rem;
+}
+
+.socialIcon {
+	transition: color 0.3s ease;
+}
+
+.bottomText {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--secondary-background-color);
+	text-align: center;
+	font-size: 0.875rem;
+}

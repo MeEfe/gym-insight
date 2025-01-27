@@ -3,6 +3,7 @@ import styles from "./Hero.module.scss";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Header from "../Header/Header";
 import CustomerFeedbackCarousel from "../Carousel/Carousel";
+import Footer from "../Footer/Footer";
 
 export default function Hero() {
 	const alignCenter = { display: "flex", alignItems: "center" };
@@ -45,13 +46,16 @@ export default function Hero() {
 						<Header />
 						<div className={styles.initPage}>
 							<div className={styles.headLine}>
-								<h2>Revolutionize your gym experience</h2>
-								<p>
+								<h1 id={styles.headline}>
+									Revolutionize your gym experience
+								</h1>
+								<p id={styles.subtitle}>
 									Track gym equipment, monitor gym occupancy
 									and enhance your workout gym
 								</p>
 							</div>
 							<svg
+								id={styles.arrowDown}
 								width="30px"
 								height="30px"
 								viewBox="0 0 24 24"
@@ -78,7 +82,10 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer offset={2} speed={0.5}>
-					<CustomerFeedbackCarousel />
+					<div className={styles.pageEndContainer}>
+						<CustomerFeedbackCarousel />
+						<Footer />
+					</div>
 				</ParallaxLayer>
 			</Parallax>
 		</>
