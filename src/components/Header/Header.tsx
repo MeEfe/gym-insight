@@ -83,19 +83,19 @@ export default function Header() {
 				>
 					<path
 						d="M20 7L4 7"
-						stroke="#c2e0ff"
+						stroke="#000"
 						strokeWidth="1.5"
 						strokeLinecap="round"
 					/>
 					<path
 						d="M20 12L4 12"
-						stroke="#c2e0ff"
+						stroke="#000"
 						strokeWidth="1.5"
 						strokeLinecap="round"
 					/>
 					<path
 						d="M20 17L4 17"
-						stroke="#c2e0ff"
+						stroke="#000"
 						strokeWidth="1.5"
 						strokeLinecap="round"
 					/>
