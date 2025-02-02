@@ -20,16 +20,19 @@ export default function Sidebar(props: {
 			<nav className={styles.nav}>
 				<ul>
 					<li>
-						<a href="#home">Home</a>
+						<a href="#efficiency">Efficiency</a>
 					</li>
 					<li>
-						<a href="#features">Features</a>
+						<a href="#smart-utilization">Smart utilization</a>
 					</li>
 					<li>
-						<a href="#pricing">Pricing</a>
+						<a href="#empowered-decisions">Empowererd Decisions</a>
 					</li>
 					<li>
-						<a href="#contact">Contact</a>
+						<a href="#seamless-experience">Seamless Experience</a>
+					</li>
+					<li>
+						<a href="#future">Future of Fitness</a>
 					</li>
 					<li>
 						<button className={styles.demoBtn}>Request demo</button>

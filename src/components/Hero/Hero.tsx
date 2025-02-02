@@ -4,7 +4,7 @@ import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Header from "../Header/Header";
 import CustomerFeedbackCarousel from "../Carousel/Carousel";
 import Footer from "../Footer/Footer";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo.png";
 import ArrowDown from "../../assets/arrow-down.svg";
 
 export default function Hero() {
@@ -38,7 +38,7 @@ export default function Hero() {
 					style={{ height: `${scrollProgress}%` }}
 				/>
 			</div>
-			<Parallax ref={parallax} pages={6}>
+			<Parallax ref={parallax} pages={7}>
 				<ParallaxLayer
 					offset={0}
 					speed={0.5}
@@ -47,10 +47,13 @@ export default function Hero() {
 					<div className={styles.initContainer}>
 						<Header />
 						<div className={styles.initPage}>
-							<div className={styles.headLine}>
+							<div className={styles.headLineContainer}>
 								<img src={Logo} alt="logo" />
 								<h1 id={styles.headline}>
-									Revolutionize your gym experience
+									Revolutionize your
+									<span className={styles.highlight}>
+										gym experience
+									</span>
 								</h1>
 								<p id={styles.subtitle}>
 									Track gym equipment, monitor gym occupancy
@@ -67,7 +70,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					sticky={{ start: 1, end: 4.5 }}
+					sticky={{ start: 1, end: 5 }}
 					style={{
 						...alignCenter,
 						justifyContent: "flex-start",
@@ -109,8 +112,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={1.8}
-					factor={0.7}
+					offset={2}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -136,8 +138,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={2.6}
-					factor={0.7}
+					offset={3}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -163,8 +164,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={3.4}
-					factor={0.7}
+					offset={4}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -189,8 +189,7 @@ export default function Hero() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={4.2}
-					factor={0.7}
+					offset={5}
 					speed={1}
 					style={{
 						...alignCenter,
@@ -215,7 +214,7 @@ export default function Hero() {
 					</div>
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={5} speed={0.5}>
+				<ParallaxLayer offset={6} speed={0.5}>
 					<div className={styles.pageEndContainer}>
 						<CustomerFeedbackCarousel />
 						<Footer />

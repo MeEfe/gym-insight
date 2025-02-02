@@ -1,0 +1,52 @@
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.section {
+	height: 100vh;
+	scroll-snap-align: start;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.sectionContent {
+	width: 80%;
+	max-width: 1200px;
+	min-height: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.title {
+	margin: 0;
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -3px;
+	line-height: 1.2;
+}
+
+.text {
+	max-width: 500px;
+	margin-left: 20px;
+}
+
+.progress {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 5px;
+	transform: scaleY(0);
+	transform-origin: top;
+	background: #fff;
+}

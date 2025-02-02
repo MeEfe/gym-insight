@@ -58,10 +58,11 @@
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
-	transition: transform 0.3s;
+	transition: transform 0.3s, color 0.3s;
 	color: var(--primary-background-color);
 
 	&:hover {
 		transform: translateX(10px);
+		color: #fff;
 	}
 }

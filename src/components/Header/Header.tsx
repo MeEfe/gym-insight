@@ -3,7 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import styles from "./Header.module.scss";
 import Sidebar from "../Sidebar/Sidebar";
 import Backdrop from "../Backdrop/Backdrop";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo.png";
 
 export default function Header() {
 	const [sidebarVisible, setSidebarVisible] = useState(false);

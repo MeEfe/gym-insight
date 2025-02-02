@@ -2,6 +2,7 @@
 	background-color: var(--primary-background-color);
 	padding: 3rem 0;
 	width: 100%;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -41,6 +42,10 @@
 .column a {
 	text-decoration: none;
 	transition: color 0.3s ease;
+
+	&:hover {
+		color: #fff;
+	}
 }
 
 .socialIcons {
@@ -55,7 +60,7 @@
 .bottomText {
 	margin-top: 2rem;
 	padding-top: 2rem;
-	border-top: 1px solid var(--secondary-background-color);
+	border-top: 2px solid var(--secondary-background-color);
 	text-align: center;
 }
 
